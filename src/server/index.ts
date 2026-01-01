@@ -22,6 +22,12 @@ const HOST = process.env.HOST || '127.0.0.1'
 
 const corsOptions = {
   origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
+    // In production, allow same-origin requests (origin will be undefined or match the server)
+    if (process.env.NODE_ENV === 'production') {
+      callback(null, true)
+      return
+    }
+    // In development, only allow specific origins
     const allowedOrigins = ['http://localhost:5173', 'http://127.0.0.1:5173', `http://localhost:${PORT}`, `http://127.0.0.1:${PORT}`]
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true)
