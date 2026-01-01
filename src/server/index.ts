@@ -332,9 +332,9 @@ app.delete('/api/settings/scan-paths', (req, res) => {
 
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../../dist/renderer')))
+  app.use(express.static(path.join(__dirname, '../renderer')))
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../dist/renderer/index.html'))
+    res.sendFile(path.join(__dirname, '../renderer/index.html'))
   })
 }
 
