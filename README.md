@@ -85,7 +85,7 @@ git clone <your-repo-url> code-project-manager
 cd code-project-manager
 
 # 安装依赖
-npm install --production
+npm install --omit=dev
 
 # 构建
 npm run build
