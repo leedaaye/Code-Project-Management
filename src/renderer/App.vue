@@ -7,7 +7,7 @@ import AddProjectModal from './components/AddProjectModal.vue'
 import ContextMenu from './components/ContextMenu.vue'
 import type { Project, Settings, Tag } from '../shared/types'
 
-const API_BASE = 'http://localhost:3000/api'
+const API_BASE = import.meta.env.DEV ? 'http://localhost:3000/api' : '/api'
 
 // API helper
 async function api<T>(endpoint: string, options?: RequestInit): Promise<T> {
