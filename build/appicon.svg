@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="50%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+    <linearGradient id="folder" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="200" fill="url(#bg)"/>
+
+  <!-- Folder base -->
+  <path d="M200 350 L200 750 Q200 800 250 800 L774 800 Q824 800 824 750 L824 400 Q824 350 774 350 L550 350 L480 280 L250 280 Q200 280 200 330 Z" fill="url(#folder)" opacity="0.9"/>
+
+  <!-- Code brackets -->
+  <g fill="none" stroke="white" stroke-width="40" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left bracket < -->
+    <path d="M380 480 L300 560 L380 640"/>
+    <!-- Right bracket > -->
+    <path d="M644 480 L724 560 L644 640"/>
+    <!-- Slash / -->
+    <path d="M560 450 L464 670"/>
+  </g>
+</svg>
